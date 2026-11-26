@@ -20,7 +20,7 @@ Rules:
 5. For each scene, produce:
    - title: short 3-6 word title in uppercase (e.g. "COZINHA AO AMANHECER")
    - description: 1-2 sentence visual description of what happens (who, where, what, mood)
-   - mood: 2-4 word emotional tag (e.g. "nostalgia calma", "tensão crescente", "ternura silenciosa")
+   - mood: 2-4 word emotional tag (e.g. "nostalgia calma", "tensêo crescente", "ternura silenciosa")
 
 6. Output ALSO:
    - title: overall title for the story (short, evocative)

@@ -20,7 +20,7 @@ INEMA EPIC
   techniques:   ["atmospheric haze depth", "natural cloth movement", "120fps slow-motion", "horizon rim lighting"]
 
 INEMA INTIMIST
-  Triggered by: cenas pessoais silenciosas, olhares demorados, pequenos gestos, interiores calmos, solidão contemplativa, toque delicado, memória, escrita de carta, preparação de chá, primeira vez, quiet domestic moments.
+  Triggered by: cenas pessoais silenciosas, olhares demorados, pequenos gestos, interiores calmos, solidêo contemplativa, toque delicado, memória, escrita de carta, preparaçêo de chá, primeira vez, quiet domestic moments.
   color_system: "warm neutral palette with soft key light, selective focus on subject, ambient bokeh background"
   camera_style: "slow dolly-in / intimate close-up / handheld natural lag"
   techniques:   ["shallow depth of field", "skin texture macro detail", "breath-synced micro-movement", "ambient volumetric light"]
@@ -32,7 +32,7 @@ INEMA URBAN PULSE
   techniques:   ["reflective surface interaction", "crowd motion blur", "120fps slow-motion detail capture", "mixed color temperature"]
 
 INEMA ELEMENTAL
-  Triggered by: chuva forte, tempestade, fogo, vento intenso, ondas, neve, relâmpago, furacão, tornado, vulcão, avalanche, natureza violenta, element-as-protagonist.
+  Triggered by: chuva forte, tempestade, fogo, vento intenso, ondas, neve, relâmpago, furacêo, tornado, vulcêo, avalanche, natureza violenta, element-as-protagonist.
   color_system: "high contrast elemental palette with dramatic directional light, element-as-key-light, deep negative space"
   camera_style: "aerial pull-back / extreme low-angle / tracking shot"
   techniques:   ["water surface tension physics", "particle system interaction", "120fps slow-motion snap-back", "elemental rim lighting"]
@@ -127,10 +127,10 @@ NEXT SCENE SUGGESTIONS FIELD
 Generate exactly 4 suggestions for what to generate NEXT, to extend this into a mini-narrative. Each suggestion is a SHORT scene idea (máximo 15 palavras) that creatively continues, contrasts, or deepens the current scene.
 
 The 4 suggestions should cover different angles:
-  1. Continuação direta — o que vem logo depois da cena atual
+  1. Continuaçêo direta — o que vem logo depois da cena atual
   2. Contraste emocional — uma cena oposta que dá profundidade ao arco
   3. Detalhe/close — um momento específico merecendo destaque
-  4. Transição ou reveal — mudança de cenário ou revelação
+  4. Transiçêo ou reveal — mudança de cenário ou revelaçêo
 
 Write in the same language as the user's input (Portuguese if input is PT, English if EN).
 
@@ -165,13 +165,13 @@ Mapping guide (use literally):
   "[0s]" / "[3s]" / "[6s]" → keep as-is
   "Phase 1 audio: practical sounds only" → "Áudio Fase 1: apenas sons práticos"
   "Phase 2 audio: ambient music enters softly" → "Áudio Fase 2: música ambiente entra suavemente"
-  "Phase 3 audio: full emotional resolution with layered sound" → "Áudio Fase 3: resolução emocional plena com som em camadas"
+  "Phase 3 audio: full emotional resolution with layered sound" → "Áudio Fase 3: resoluçêo emocional plena com som em camadas"
   "Moment of pause 1-2 seconds — brief quiet" → "Momento de pausa de 1-2 segundos — breve silêncio"
   "return to natural motion" → "retorno ao movimento natural"
-  "Cinematic 2.39:1 aspect ratio" → "Proporção cinematográfica 2.39:1"
+  "Cinematic 2.39:1 aspect ratio" → "Proporçêo cinematográfica 2.39:1"
   "120fps slow-motion" → "câmera lenta 120fps"
   "cloth inertia" → "inércia de tecido"
-  "handheld natural lag" → "câmera na mão com atraso natural"
+  "handheld natural lag" → "câmera na mêo com atraso natural"
 
 ═══════════════════════════════════════════════════════════════════
 SECURITY RULES

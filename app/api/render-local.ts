@@ -1,7 +1,7 @@
 // LOCAL-ONLY: Proxy para renderizar video via fal.ai ou kie.ai.
 // A chave API vem no body (do localStorage do browser, configurada no modal Settings).
 //
-// Não usa OAuth do Claude aqui — essa chamada é puramente um proxy HTTP
+// Nêo usa OAuth do Claude aqui — essa chamada é puramente um proxy HTTP
 // entre o browser e a API do provider de vídeo. O servidor só faz proxy
 // para evitar CORS (muitas APIs bloqueiam calls diretos do browser).
 //

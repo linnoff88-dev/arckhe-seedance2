@@ -1,17 +1,17 @@
 # Taxonomia INEMA — Presets Canônicos
 
-> Versão: 1.0 (APROVADA) · Data: 2026-04-13
+> Versêo: 1.0 (APROVADA) · Data: 2026-04-13
 > Status: **canônica — embutida no `api/generate.ts`**
 
-Esta é a taxonomia autoral da aplicação INEMA de geração de prompts para Seedance 2.0. Segue a estrutura arquitetural do módulo 3.3 da Trilha 3 (8 camadas), mas com nomes, triggers e strings canônicas próprias — **não é cópia** dos presets do produto estudado.
+Esta é a taxonomia autoral da aplicaçêo INEMA de geraçêo de prompts para Seedance 2.0. Segue a estrutura arquitetural do módulo 3.3 da Trilha 3 (8 camadas), mas com nomes, triggers e strings canônicas próprias — **nêo é cópia** dos presets do produto estudado.
 
 ## Princípios
 
-1. **Cada preset tem uma função emocional clara** — não sobreposição.
-2. **Strings canônicas são literais** — o modelo copia, não parafraseia.
-3. **Triggers são palavras-chave** (em PT ou EN) que a cena do usuário contém.
+1. **Cada preset tem uma funçêo emocional clara** — nêo sobreposiçêo.
+2. **Strings canônicas sêo literais** — o modelo copia, nêo parafraseia.
+3. **Triggers sêo palavras-chave** (em PT ou EN) que a cena do usuário contém.
 4. **Vocabulário herdado** (camera, physics, time, lighting) é público e universal — reutilizável.
-5. **Fallback inventivo** quando nenhum core encaixa (padrão `<REFERENCE> <STYLE>`).
+5. **Fallback inventivo** quando nenhum core encaixa (padrêo `<REFERENCE> <STYLE>`).
 
 ---
 
@@ -19,7 +19,7 @@ Esta é a taxonomia autoral da aplicação INEMA de geração de prompts para Se
 
 ### 1. INEMA EPIC — Grandeza e escala
 
-**Função emocional:** o mundo como protagonista, sentimento de pequenez diante da imensidão, respeito, solenidade.
+**Funçêo emocional:** o mundo como protagonista, sentimento de pequenez diante da imensidêo, respeito, solenidade.
 
 ```
 Triggered by: paisagens vastas, natureza imponente, figura solitária contra o mundo,
@@ -37,12 +37,12 @@ techniques:   ["atmospheric haze depth", "natural cloth movement",
 
 ### 2. INEMA INTIMIST — Momentos íntimos e contemplativos
 
-**Função emocional:** proximidade pessoal, silêncio significativo, vulnerabilidade, gestos pequenos que importam.
+**Funçêo emocional:** proximidade pessoal, silêncio significativo, vulnerabilidade, gestos pequenos que importam.
 
 ```
 Triggered by: cenas pessoais silenciosas, olhares demorados, pequenos gestos,
-              interiores calmos, solidão contemplativa, toque delicado, memória,
-              escrita de carta, preparação de chá, primeira vez
+              interiores calmos, solidêo contemplativa, toque delicado, memória,
+              escrita de carta, preparaçêo de chá, primeira vez
 color_system: "warm neutral palette with soft key light, selective focus on subject,
                ambient bokeh background"
 camera_style: "slow dolly-in / intimate close-up / handheld natural lag"
@@ -50,13 +50,13 @@ techniques:   ["shallow depth of field", "skin texture macro detail",
                "breath-synced micro-movement", "ambient volumetric light"]
 ```
 
-**Casos-exemplo:** mão escrevendo carta à luz de janela · avô passando xícara de chá · casal em silêncio no sofá · criança amarrando sapato · primeira leitura de livro.
+**Casos-exemplo:** mêo escrevendo carta à luz de janela · avô passando xícara de chá · casal em silêncio no sofá · criança amarrando sapato · primeira leitura de livro.
 
 ---
 
 ### 3. INEMA URBAN PULSE — Cidade contemporânea viva
 
-**Função emocional:** cotidiano vibrante, movimento urbano, modernidade, ritmo da cidade, vida acontecendo.
+**Funçêo emocional:** cotidiano vibrante, movimento urbano, modernidade, ritmo da cidade, vida acontecendo.
 
 ```
 Triggered by: ruas movimentadas, metrô, café urbano, escritório moderno, skateboard,
@@ -69,17 +69,17 @@ techniques:   ["reflective surface interaction", "crowd motion blur",
                "120fps slow-motion detail capture", "mixed color temperature"]
 ```
 
-**Casos-exemplo:** corrida da manhã pela cidade · skatista em praça · atravessando metrô de São Paulo · barista preparando café · vendedor de rua em feira.
+**Casos-exemplo:** corrida da manhê pela cidade · skatista em praça · atravessando metrô de Sêo Paulo · barista preparando café · vendedor de rua em feira.
 
 ---
 
 ### 4. INEMA ELEMENTAL — Forças da natureza em primeiro plano
 
-**Função emocional:** poder da natureza, elemento como protagonista absoluto, impotência humana, beleza destrutiva.
+**Funçêo emocional:** poder da natureza, elemento como protagonista absoluto, impotência humana, beleza destrutiva.
 
 ```
 Triggered by: chuva forte, tempestade, fogo, vento intenso, ondas, neve, relâmpago,
-              furacão, tornado, vulcão, avalanche, natureza violenta
+              furacêo, tornado, vulcêo, avalanche, natureza violenta
 color_system: "high contrast elemental palette with dramatic directional light,
                element-as-key-light, deep negative space"
 camera_style: "aerial pull-back / extreme low-angle / tracking shot"
@@ -93,7 +93,7 @@ techniques:   ["water surface tension physics", "particle system interaction",
 
 ### 5. INEMA DREAM — Onírico e fantasia suave
 
-**Função emocional:** mágico sem ser infantil, memória idealizada, poesia visual, atmosfera etérea.
+**Funçêo emocional:** mágico sem ser infantil, memória idealizada, poesia visual, atmosfera etérea.
 
 ```
 Triggered by: cenas surreais, fantasia delicada, infância, memória nostálgica,
@@ -110,9 +110,9 @@ techniques:   ["cloth inertia physics", "particle drift atmosphere",
 
 ---
 
-### 6. INEMA DOCUMENTARY — Observação autêntica
+### 6. INEMA DOCUMENTARY — Observaçêo autêntica
 
-**Função emocional:** realismo honesto, relato, crédibilidade, personagem real em contexto real.
+**Funçêo emocional:** realismo honesto, relato, crédibilidade, personagem real em contexto real.
 
 ```
 Triggered by: realismo, relato, personagem real contando história, produtos em uso real,
@@ -125,29 +125,29 @@ techniques:   ["natural practical lighting", "unscripted micro-expressions",
                "environmental sound detail", "documentary observational framing"]
 ```
 
-**Casos-exemplo:** ceramista no torno · enfermeira em plantão · feirante contando da banca · pai ensinando filho a andar de bike · artesã bordando no quintal.
+**Casos-exemplo:** ceramista no torno · enfermeira em plantêo · feirante contando da banca · pai ensinando filho a andar de bike · artesê bordando no quintal.
 
 ---
 
 ## Fallback inventivo
 
-Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cinematográfico famoso, o modelo deve **inventar um gênero novo** em CAPS seguindo o padrão `<REFERENCE> <STYLE>`.
+Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cinematográfico famoso, o modelo deve **inventar um gênero novo** em CAPS seguindo o padrêo `<REFERENCE> <STYLE>`.
 
 **Exemplos permitidos:**
 - `LYNCH SURREAL` — surrealismo David Lynch (cortinas vermelhas, luz verde, slow ambient dread)
-- `ALMODOVAR VIBRANT` — melodrama espanhol Almodóvar (vermelho + amarelo vivos, paixão)
+- `ALMODOVAR VIBRANT` — melodrama espanhol Almodóvar (vermelho + amarelo vivos, paixêo)
 - `MIYAZAKI PASTORAL` — estética Studio Ghibli (céu azul com nuvens grandes, vento no cabelo)
 - `KUBRICK SYMMETRIC` — simetria Kubrick (one-point perspective, geometria rígida)
-- `WONG KAR WAI NEON` — Wong Kar Wai (slow motion, neon, solidão urbana)
-- `GLAUBER ROCHA ARIDO` — cinema novo brasileiro (alto contraste, ventos do sertão)
+- `WONG KAR WAI NEON` — Wong Kar Wai (slow motion, neon, solidêo urbana)
+- `GLAUBER ROCHA ARIDO` — cinema novo brasileiro (alto contraste, ventos do sertêo)
 
-**Instrução ao modelo:** use o nome do diretor/estilo em CAPS, preencha `color_system`, `camera_style` e `techniques` baseado no conhecimento visual desse estilo.
+**Instruçêo ao modelo:** use o nome do diretor/estilo em CAPS, preencha `color_system`, `camera_style` e `techniques` baseado no conhecimento visual desse estilo.
 
 ---
 
 ## Routing rules (ordem de prioridade)
 
-1. **Match pelo PRIMEIRO** preset cujos triggers se encaixam na descrição.
+1. **Match pelo PRIMEIRO** preset cujos triggers se encaixam na descriçêo.
 2. **Se nenhum core encaixa** mas a cena evoca estilo cinematográfico famoso → invente via fallback.
 3. **Default de escala**: cenas épicas/grandes sem trigger específico → `INEMA EPIC`.
 4. **Default de intimidade**: cenas pessoais/calmas sem trigger específico → `INEMA INTIMIST`.
@@ -188,9 +188,9 @@ LINE 1 (literal opening, always):
 | [6s] audio | "full orchestral score crescendo with 3x audio density" | **"full emotional resolution with layered sound"** — sem obrigar orquestra |
 | Fechamento | "Anamorphic 2.39:1" | **"Cinematic 2.39:1 aspect ratio"** — mesma coisa, linguagem menos técnica |
 
-**Justificativa das mudanças:** O template original foi validado contra Seedance 1.x e é datado (STOP MOTION virou assinatura overused, brass chord é muito específico). A versão INEMA mantém o que é técnica universal (`same character`, 3 beats, 3 fases de áudio, 2.39:1) mas substitui os elementos autorais do produto estudado por variações mais flexíveis e atemporais.
+**Justificativa das mudanças:** O template original foi validado contra Seedance 1.x e é datado (STOP MOTION virou assinatura overused, brass chord é muito específico). A versêo INEMA mantém o que é técnica universal (`same character`, 3 beats, 3 fases de áudio, 2.39:1) mas substitui os elementos autorais do produto estudado por variações mais flexíveis e atemporais.
 
-**Selo "Revalidar v2.0"**: testar empiricamente se esses 3 elementos modificados performam tão bem quanto os originais no Seedance 2.0 atual. Se não, voltar para os originais.
+**Selo "Revalidar v2.0"**: testar empiricamente se esses 3 elementos modificados performam têo bem quanto os originais no Seedance 2.0 atual. Se nêo, voltar para os originais.
 
 ---
 
@@ -200,22 +200,22 @@ Antes de congelar esta taxonomia no `SYSTEM_PROMPT` do `api/generate.ts`, o usu�
 
 1. **Nomes dos 6 presets** — "INEMA EPIC", "INEMA INTIMIST", "INEMA URBAN PULSE", "INEMA ELEMENTAL", "INEMA DREAM", "INEMA DOCUMENTARY". Mantém todos? Troca algum? Adiciona um 7º?
 
-2. **Strings canônicas** — cada preset tem uma string `color_system` de 1 linha. As do draft são propostas. Usuário quer reescrever?
+2. **Strings canônicas** — cada preset tem uma string `color_system` de 1 linha. As do draft sêo propostas. Usuário quer reescrever?
 
-3. **Triggers** — as palavras-chave que ativam cada preset estão corretas para o público da INEMA?
+3. **Triggers** — as palavras-chave que ativam cada preset estêo corretas para o público da INEMA?
 
-4. **Fallback inventivo** — os 6 exemplos (LYNCH, ALMODOVAR, MIYAZAKI, KUBRICK, WONG KAR WAI, GLAUBER ROCHA) são direções razoáveis? Glauber Rocha vale a pena citar (brasileiro) ou é muito nicho?
+4. **Fallback inventivo** — os 6 exemplos (LYNCH, ALMODOVAR, MIYAZAKI, KUBRICK, WONG KAR WAI, GLAUBER ROCHA) sêo direções razoáveis? Glauber Rocha vale a pena citar (brasileiro) ou é muito nicho?
 
-5. **Template temporal** — as 4 mudanças listadas em "Diferenças vs. material de referência" são aceitáveis? Ou prefere manter o template original do produto estudado literalmente (STOP MOTION + brass chord + 3x audio density)?
+5. **Template temporal** — as 4 mudanças listadas em "Diferenças vs. material de referência" sêo aceitáveis? Ou prefere manter o template original do produto estudado literalmente (STOP MOTION + brass chord + 3x audio density)?
 
 Quando as 5 decisões forem tomadas, o system prompt final é escrito no `api/generate.ts` e a app vai para teste.
 
 ---
 
-## Próximos passos (após aprovação)
+## Próximos passos (após aprovaçêo)
 
 1. Usuário revisa este documento e pede ajustes (nomes, strings, triggers, fallback, template).
-2. Segunda versão deste .md é commitada com "(APROVADA v1.0)" no header.
+2. Segunda versêo deste .md é commitada com "(APROVADA v1.0)" no header.
 3. System prompt completo é escrito em `api/generate.ts` embutindo esta taxonomia.
 4. Frontend é construído.
 5. Deploy + teste.

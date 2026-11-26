@@ -3,7 +3,7 @@
 > Gerador estruturado de prompts cinematográficos para Seedance 2.0.
 > Taxonomia autoral INEMA v1.0 · Powered by Claude Sonnet 4.6 · Deploy na Vercel.
 
-Transforma descrição em português/inglês → prompt estruturado de 300-450 palavras pronto para colar na fal.ai ou kie.ai.
+Transforma descriçêo em português/inglês → prompt estruturado de 300-450 palavras pronto para colar na fal.ai ou kie.ai.
 
 ## Arquitetura
 
@@ -26,7 +26,7 @@ app/
 - Backend: Vercel Serverless Function TypeScript (Node 20).
 - IA: Anthropic Claude Sonnet 4.6 com `tool_choice` forçado.
 - Cache: `cache_control: ephemeral` no system prompt (5 min TTL, economiza ~89%).
-- Rate limit: 5 req/min por IP (in-memory por instância da função).
+- Rate limit: 5 req/min por IP (in-memory por instância da funçêo).
 
 ## Testando localmente — passo a passo completo
 
@@ -34,14 +34,14 @@ app/
 
 Antes de começar, você precisa ter:
 
-| Item | Versão mínima | Como verificar |
+| Item | Versêo mínima | Como verificar |
 |---|---|---|
 | **Node.js** | 18+ (recomendado 20) | `node --version` |
 | **npm** | 9+ (vem com o Node) | `npm --version` |
 | **git** | qualquer recente | `git --version` |
 | **Chave Anthropic API** | — | [console.anthropic.com](https://console.anthropic.com) → API Keys |
 
-Se não tem Node, instale via [nodejs.org](https://nodejs.org) (LTS) ou via `nvm`:
+Se nêo tem Node, instale via [nodejs.org](https://nodejs.org) (LTS) ou via `nvm`:
 
 ```bash
 # com nvm (recomendado no Linux/macOS)
@@ -60,7 +60,7 @@ Você precisa de uma chave para rodar o app. **~$5 de crédito** é suficiente p
 5. **Copie a chave** (começa com `sk-ant-...`) — você só vai vê-la uma vez
 6. Em **Billing**, adicione $5 ou $10 de crédito (ou use o crédito grátis inicial se for nova conta)
 
-### Passo 2 — Clonar o repositório (se ainda não tem)
+### Passo 2 — Clonar o repositório (se ainda nêo tem)
 
 ```bash
 git clone https://github.com/inematds/seedance2.git
@@ -81,7 +81,7 @@ npm install
 
 Isso instala `@anthropic-ai/sdk`, `@vercel/node` e `typescript` (~30-60s na primeira vez).
 
-**Se der erro de permissão:** não use `sudo`. Use `nvm` para instalar o Node sem permissões de root.
+**Se der erro de permissêo:** nêo use `sudo`. Use `nvm` para instalar o Node sem permissões de root.
 
 ### Passo 4 — Configurar variáveis de ambiente
 
@@ -104,7 +104,7 @@ ALLOWED_ORIGIN=*
 npm install -g vercel
 ```
 
-Se der erro de permissão global, use `nvm` (que instala em user-space) ou rode com prefix local:
+Se der erro de permissêo global, use `nvm` (que instala em user-space) ou rode com prefix local:
 
 ```bash
 npm install --prefix ~/.local vercel
@@ -128,11 +128,11 @@ Na primeira vez o CLI vai perguntar:
 - **"Set up and develop X?"** → responda `Y`
 - **"Which scope?"** → escolha sua conta pessoal
 - **"Link to existing project?"** → `N` (é a primeira vez)
-- **"What's your project name?"** → aceite o padrão (ex: `app`) ou nomeie
+- **"What's your project name?"** → aceite o padrêo (ex: `app`) ou nomeie
 - **"In which directory is your code located?"** → aceite `./`
 - Pode perguntar sobre framework → escolha **"Other"**
 
-Depois da configuração inicial, o servidor sobe em:
+Depois da configuraçêo inicial, o servidor sobe em:
 
 ```
 Ready! Available at http://localhost:3000
@@ -140,7 +140,7 @@ Ready! Available at http://localhost:3000
 
 Abra `http://localhost:3000` no navegador. O app deve estar rodando. 🎉
 
-### Passo 7 — Testar a aplicação
+### Passo 7 — Testar a aplicaçêo
 
 **Via navegador:**
 
@@ -152,7 +152,7 @@ Abra `http://localhost:3000` no navegador. O app deve estar rodando. 🎉
    - Categoria INEMA (ex: `INEMA EPIC`)
    - Sistema de cores + estilo de câmera + 4 técnicas
    - Prompt em inglês (300-450 palavras)
-   - Prompt em português (tradução literal)
+   - Prompt em português (traduçêo literal)
    - 4 recomendações técnicas
 6. Teste os botões **"Copiar"**, **"Abrir na fal.ai"** e **"Abrir na kie.ai"**
 
@@ -167,7 +167,7 @@ curl -X POST http://localhost:3000/api/generate \
   }' | jq
 ```
 
-(Se não tiver `jq`, remova o `| jq` — vai aparecer o JSON cru.)
+(Se nêo tiver `jq`, remova o `| jq` — vai aparecer o JSON cru.)
 
 Resposta esperada: JSON com `category`, `color_system`, `camera_style`, `techniques`, `english_prompt`, `portuguese_prompt`, `recommendations`.
 
@@ -184,21 +184,21 @@ No terminal do `vercel dev`, cada chamada aparece como log:
 
 ## Troubleshooting
 
-| Problema | Causa provável | Solução |
+| Problema | Causa provável | Soluçêo |
 |---|---|---|
-| `Error: Cannot find module '@anthropic-ai/sdk'` | `npm install` não rodou ou falhou | Rode `npm install` de novo dentro de `app/` |
-| `Error: ANTHROPIC_API_KEY is not set` | `.env` não existe ou variável não está lá | Confira `cat .env` mostra a chave com prefix `sk-ant-` |
+| `Error: Cannot find module '@anthropic-ai/sdk'` | `npm install` nêo rodou ou falhou | Rode `npm install` de novo dentro de `app/` |
+| `Error: ANTHROPIC_API_KEY is not set` | `.env` nêo existe ou variável nêo está lá | Confira `cat .env` mostra a chave com prefix `sk-ant-` |
 | `401 authentication_error` da Anthropic | Chave inválida ou sem crédito | Confira `console.anthropic.com` — regenere a chave ou adicione saldo |
 | `Rate limit exceeded` | Você fez > 5 requests em 1 minuto | Espere 60s ou reinicie o `vercel dev` (zera o bucket in-memory) |
-| Frontend abre mas clica e nada acontece | Abriu o arquivo diretamente em vez do servidor local | Use `http://localhost:3000`, NÃO `file://...` |
-| `vercel dev` pede login no navegador | Primeira vez usando o CLI | Faça login na conta Vercel (grátis) — não precisa criar projeto ainda |
+| Frontend abre mas clica e nada acontece | Abriu o arquivo diretamente em vez do servidor local | Use `http://localhost:3000`, NêO `file://...` |
+| `vercel dev` pede login no navegador | Primeira vez usando o CLI | Faça login na conta Vercel (grátis) — nêo precisa criar projeto ainda |
 | Fica travado "Gerando..." indefinidamente | Internet ruim, API fora, ou cold start lento | Espere 30s. Se passar disso, olhe o terminal do `vercel dev` para ver o erro |
-| `Error: No scene provided` | Textarea vazia ou só espaços | Digite uma descrição de pelo menos 1 palavra |
+| `Error: No scene provided` | Textarea vazia ou só espaços | Digite uma descriçêo de pelo menos 1 palavra |
 | `SyntaxError: Unexpected token '<'` | Endpoint retornou HTML em vez de JSON (geralmente 500 do servidor) | Olhe o terminal do `vercel dev` — há um erro Python/TS que mostra a stack trace |
 
 ## Rodar sem Vercel CLI (alternativa)
 
-Se você não quer instalar o Vercel CLI e só quer testar a function, dá para rodar direto com `tsx`:
+Se você nêo quer instalar o Vercel CLI e só quer testar a function, dá para rodar direto com `tsx`:
 
 ```bash
 npm install -g tsx
@@ -207,13 +207,13 @@ npm install -g tsx
 npx tsx --tsconfig tsconfig.json api/generate.ts
 ```
 
-**Mas é mais complicado** — você precisa montar o wrapper HTTP na mão, porque a função espera `VercelRequest`/`VercelResponse`. **Recomendo usar `vercel dev`** (que cuida de tudo).
+**Mas é mais complicado** — você precisa montar o wrapper HTTP na mêo, porque a funçêo espera `VercelRequest`/`VercelResponse`. **Recomendo usar `vercel dev`** (que cuida de tudo).
 
-Alternativa ainda mais simples: deploy direto em produção (Passo "Deploy em produção" abaixo) e testar lá.
+Alternativa ainda mais simples: deploy direto em produçêo (Passo "Deploy em produçêo" abaixo) e testar lá.
 
 ---
 
-## Deploy em produção
+## Deploy em produçêo
 
 ```bash
 # 1. Login no Vercel
@@ -223,7 +223,7 @@ vercel login
 cd app
 vercel link
 
-# 3. Configurar env vars em produção
+# 3. Configurar env vars em produçêo
 vercel env add ANTHROPIC_API_KEY production
 # cole sua chave quando perguntar
 
@@ -237,7 +237,7 @@ vercel --prod
 
 O Vercel retorna a URL pública (`https://*.vercel.app`) em segundos.
 
-## Custo por geração
+## Custo por geraçêo
 
 | Fase | Custo |
 |---|---|
@@ -249,7 +249,7 @@ Na prática: **~R$ 0,12 por prompt** gerado após warmup. Com um markup comercia
 
 ## Estrutura do system prompt
 
-O arquivo `api/generate.ts` contém o system prompt em 8 camadas (padrão do módulo 3.3 do curso):
+O arquivo `api/generate.ts` contém o system prompt em 8 camadas (padrêo do módulo 3.3 do curso):
 
 1. **ROLE** — "You are an INEMA Cinematic Prompt Engineer"
 2. **OUTPUT SCHEMA** — 7 campos forçados via tool use
@@ -260,7 +260,7 @@ O arquivo `api/generate.ts` contém o system prompt em 8 camadas (padrão do mó
 7. **RECOMMENDATIONS** — 4 dicas técnicas com contra-exemplos
 8. **HARDENING** — security rules anti-injection
 
-Ver `docs/INEMA-TAXONOMY.md` para a versão documentada e versionada da taxonomia.
+Ver `docs/INEMA-TAXONOMY.md` para a versêo documentada e versionada da taxonomia.
 
 ## Fluxo do usuário
 
@@ -276,7 +276,7 @@ Usuário descreve cena em PT → POST /api/generate
                     - camera_style
                     - techniques[4]
                     - english_prompt (300-450 palavras)
-                    - portuguese_prompt (tradução literal)
+                    - portuguese_prompt (traduçêo literal)
                     - recommendations[4]
                               ↓
                   Frontend renderiza resultado
@@ -329,9 +329,9 @@ Ao clicar nos botões de abrir, o prompt em inglês é copiado para o clipboard 
 - **Tool use forçado** bloqueia prompt injection (sem canal de texto livre).
 - **Rate limit** 5 req/min por IP.
 - **Input cap** de 4000 caracteres.
-- **CORS** restrito via `ALLOWED_ORIGIN` (padrão `*` em dev, setar em prod).
+- **CORS** restrito via `ALLOWED_ORIGIN` (padrêo `*` em dev, setar em prod).
 - **Refusal estruturado** via `category="REFUSED"` para conteúdo que viola política Anthropic.
-- **Security rules** no system prompt interpretam tentativas de injection como parte da descrição.
+- **Security rules** no system prompt interpretam tentativas de injection como parte da descriçêo.
 
 ## Taxonomia canônica
 
@@ -341,23 +341,23 @@ Ver [`docs/INEMA-TAXONOMY.md`](./docs/INEMA-TAXONOMY.md) — documento versionad
 
 - [ ] Taxonomia configurável (UI para criar presets próprios por nicho)
 - [ ] Render integrado via fal.ai (polling + storage do vídeo)
-- [ ] Autenticação magic link (sem senha, via Resend)
+- [ ] Autenticaçêo magic link (sem senha, via Resend)
 - [ ] Paywall Stripe (freemium: 3 grátis por mês)
 - [ ] Dashboard de uso (gerações, custo acumulado, top presets)
 - [ ] Histórico versionado de prompts
 - [ ] Analytics anônimo (presets mais acionados)
-- [ ] Multi-nicho (apps irmãos: beauty, gaming, corporate)
+- [ ] Multi-nicho (apps irmêos: beauty, gaming, corporate)
 
-## Relação com o curso
+## Relaçêo com o curso
 
 Esta app é o laboratório vivo dos módulos 3.4 e 3.5 da Trilha 3 do curso **Seedance 2.0 Mastery** ([inema.club](https://inema.club)):
 
-- **Módulo 3.4** — "Construindo sua aplicação" — decisões arquiteturais explicadas aqui.
+- **Módulo 3.4** — "Construindo sua aplicaçêo" — decisões arquiteturais explicadas aqui.
 - **Módulo 3.5** — "Passo a passo construindo sua app" — tutorial do zero que produz esta app.
 - **Módulo 3.7** — "Fluxo completo end-to-end" — esta app é usada como exemplo real.
 
-Alunos da Trilha 3 podem clonar este código, trocar a taxonomia INEMA pela sua própria, e ter uma app rodando em produção em ~1 hora.
+Alunos da Trilha 3 podem clonar este código, trocar a taxonomia INEMA pela sua própria, e ter uma app rodando em produçêo em ~1 hora.
 
 ## Licença
 
-MIT. Fique à vontade para forkar, adaptar e publicar sua própria versão com sua taxonomia autoral.
+MIT. Fique à vontade para forkar, adaptar e publicar sua própria versêo com sua taxonomia autoral.
