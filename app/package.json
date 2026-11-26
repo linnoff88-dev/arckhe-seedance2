@@ -1,8 +1,8 @@
 {
-  "name": "inema-seedance-app",
+  "name": "ARCKHÉ-seedance-app",
   "version": "0.1.0",
   "private": true,
-  "description": "Gerador estruturado de prompts cinematograficos INEMA para Seedance 2.0",
+  "description": "Gerador estruturado de prompts cARCKHÉtograficos ARCKHÉ para Seedance 2.0",
   "scripts": {
     "dev": "node dev-server.mjs",
     "dev:local": "API_FILE=api/generate-local.ts node dev-server.mjs",

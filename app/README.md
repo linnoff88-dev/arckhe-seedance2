@@ -1,7 +1,7 @@
-# INEMA Prompt Engine
+# ARCKHÉ Prompt Engine
 
-> Gerador estruturado de prompts cinematográficos para Seedance 2.0.
-> Taxonomia autoral INEMA v1.0 · Powered by Claude Sonnet 4.6 · Deploy na Vercel.
+> Gerador estruturado de prompts cARCKHÉtográficos para Seedance 2.0.
+> Taxonomia autoral ARCKHÉ v1.0 · Powered by Claude Sonnet 4.6 · Deploy na Vercel.
 
 Transforma descriçêo em português/inglês → prompt estruturado de 300-450 palavras pronto para colar na fal.ai ou kie.ai.
 
@@ -14,7 +14,7 @@ app/
 ├── public/
 │   └── index.html        # Frontend single-file (Tailwind CDN, vanilla JS)
 ├── docs/
-│   └── INEMA-TAXONOMY.md # Taxonomia canônica versionada (6 presets INEMA)
+│   └── ARCKHÉ-TAXONOMY.md # Taxonomia canônica versionada (6 presets ARCKHÉ)
 ├── package.json
 ├── vercel.json
 ├── tsconfig.json
@@ -56,14 +56,14 @@ Você precisa de uma chave para rodar o app. **~$5 de crédito** é suficiente p
 1. Acesse [console.anthropic.com](https://console.anthropic.com)
 2. Faça login (Google ou email)
 3. Vá em **API Keys** no menu lateral → **Create Key**
-4. Dê um nome (ex: `inema-local`) → **Create Key**
+4. Dê um nome (ex: `ARCKHÉ-local`) → **Create Key**
 5. **Copie a chave** (começa com `sk-ant-...`) — você só vai vê-la uma vez
 6. Em **Billing**, adicione $5 ou $10 de crédito (ou use o crédito grátis inicial se for nova conta)
 
 ### Passo 2 — Clonar o repositório (se ainda nêo tem)
 
 ```bash
-git clone https://github.com/inematds/seedance2.git
+git clone https://github.com/linnoff88-dev/seedance2.git
 cd seedance2/app
 ```
 
@@ -146,10 +146,10 @@ Abra `http://localhost:3000` no navegador. O app deve estar rodando. 🎉
 
 1. Abra `http://localhost:3000`
 2. Clique em um dos botões de exemplo (ex: "Épico") — vai preencher a textarea
-3. Clique em **"Gerar prompt cinematográfico"**
+3. Clique em **"Gerar prompt cARCKHÉtográfico"**
 4. Espere ~15-30 segundos (primeira vez é mais lenta por causa do cold start)
 5. Resultado estruturado deve aparecer com:
-   - Categoria INEMA (ex: `INEMA EPIC`)
+   - Categoria ARCKHÉ (ex: `ARCKHÉ EPIC`)
    - Sistema de cores + estilo de câmera + 4 técnicas
    - Prompt em inglês (300-450 palavras)
    - Prompt em português (traduçêo literal)
@@ -176,8 +176,8 @@ Resposta esperada: JSON com `category`, `color_system`, `camera_style`, `techniq
 No terminal do `vercel dev`, cada chamada aparece como log:
 
 ```
-[generate] ip=::1 category=INEMA DREAM tokens_in=3127 tokens_out=1450 cache_read=0
-[generate] ip=::1 category=INEMA INTIMIST tokens_in=3128 tokens_out=1420 cache_read=2932
+[generate] ip=::1 category=ARCKHÉ DREAM tokens_in=3127 tokens_out=1450 cache_read=0
+[generate] ip=::1 category=ARCKHÉ INTIMIST tokens_in=3128 tokens_out=1420 cache_read=2932
 ```
 
 **Na segunda chamada (dentro de 5 min), `cache_read` deve ser > 0** — prova de que o prompt cache está funcionando (~89% de economia nos tokens de input).
@@ -229,7 +229,7 @@ vercel env add ANTHROPIC_API_KEY production
 
 # (Opcional) Restringir CORS ao domínio final
 vercel env add ALLOWED_ORIGIN production
-# ex: https://inema-prompt.vercel.app
+# ex: https://ARCKHÉ-prompt.vercel.app
 
 # 4. Deploy
 vercel --prod
@@ -251,16 +251,16 @@ Na prática: **~R$ 0,12 por prompt** gerado após warmup. Com um markup comercia
 
 O arquivo `api/generate.ts` contém o system prompt em 8 camadas (padrêo do módulo 3.3 do curso):
 
-1. **ROLE** — "You are an INEMA Cinematic Prompt Engineer"
+1. **ROLE** — "You are an ARCKHÉ CARCKHÉtic Prompt Engineer"
 2. **OUTPUT SCHEMA** — 7 campos forçados via tool use
-3. **PRESETS** — os 6 INEMA (EPIC, INTIMIST, URBAN PULSE, ELEMENTAL, DREAM, DOCUMENTARY)
+3. **PRESETS** — os 6 ARCKHÉ (EPIC, INTIMIST, URBAN PULSE, ELEMENTAL, DREAM, DOCUMENTARY)
 4. **ROUTING RULES** — match + fallback inventivo + defaults
 5. **TEMPLATE TEMPORAL** — `[0s][3s][6s]` + hard rules
 6. **APPROVED VOCABULARY** — camera, physics, time, lighting, audio
 7. **RECOMMENDATIONS** — 4 dicas técnicas com contra-exemplos
 8. **HARDENING** — security rules anti-injection
 
-Ver `docs/INEMA-TAXONOMY.md` para a versêo documentada e versionada da taxonomia.
+Ver `docs/ARCKHÉ-TAXONOMY.md` para a versêo documentada e versionada da taxonomia.
 
 ## Fluxo do usuário
 
@@ -271,7 +271,7 @@ Usuário descreve cena em PT → POST /api/generate
                       (tool use forçado + cache)
                               ↓
                     JSON estruturado 7 campos:
-                    - category (INEMA preset ou inventado)
+                    - category (ARCKHÉ preset ou inventado)
                     - color_system
                     - camera_style
                     - techniques[4]
@@ -302,7 +302,7 @@ Usuário descreve cena em PT → POST /api/generate
 **Response 200:**
 ```json
 {
-  "category": "INEMA DREAM",
+  "category": "ARCKHÉ DREAM",
   "color_system": "dreamy pastel palette with golden hour warmth, soft diffuse light, gentle particle atmosphere",
   "camera_style": "dreamy slow dollies / graceful orbits / handheld natural lag",
   "techniques": ["cloth inertia physics", "particle drift atmosphere", "120fps slow-motion", "golden hour rim lighting"],
@@ -335,7 +335,7 @@ Ao clicar nos botões de abrir, o prompt em inglês é copiado para o clipboard 
 
 ## Taxonomia canônica
 
-Ver [`docs/INEMA-TAXONOMY.md`](./docs/INEMA-TAXONOMY.md) — documento versionado com os 6 presets INEMA, triggers, strings canônicas, routing rules e template temporal.
+Ver [`docs/ARCKHÉ-TAXONOMY.md`](./docs/ARCKHÉ-TAXONOMY.md) — documento versionado com os 6 presets ARCKHÉ, triggers, strings canônicas, routing rules e template temporal.
 
 ## Roadmap v2
 
@@ -350,13 +350,13 @@ Ver [`docs/INEMA-TAXONOMY.md`](./docs/INEMA-TAXONOMY.md) — documento versionad
 
 ## Relaçêo com o curso
 
-Esta app é o laboratório vivo dos módulos 3.4 e 3.5 da Trilha 3 do curso **Seedance 2.0 Mastery** ([inema.club](https://inema.club)):
+Esta app é o laboratório vivo dos módulos 3.4 e 3.5 da Trilha 3 do curso **Seedance 2.0 Mastery** ([ARCKHÉ AI](https://ARCKHÉ AI)):
 
 - **Módulo 3.4** — "Construindo sua aplicaçêo" — decisões arquiteturais explicadas aqui.
 - **Módulo 3.5** — "Passo a passo construindo sua app" — tutorial do zero que produz esta app.
 - **Módulo 3.7** — "Fluxo completo end-to-end" — esta app é usada como exemplo real.
 
-Alunos da Trilha 3 podem clonar este código, trocar a taxonomia INEMA pela sua própria, e ter uma app rodando em produçêo em ~1 hora.
+Alunos da Trilha 3 podem clonar este código, trocar a taxonomia ARCKHÉ pela sua própria, e ter uma app rodando em produçêo em ~1 hora.
 
 ## Licença
 

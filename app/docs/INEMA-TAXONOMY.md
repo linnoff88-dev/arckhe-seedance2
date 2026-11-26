@@ -1,9 +1,9 @@
-# Taxonomia INEMA — Presets Canônicos
+# Taxonomia ARCKHÉ — Presets Canônicos
 
 > Versêo: 1.0 (APROVADA) · Data: 2026-04-13
 > Status: **canônica — embutida no `api/generate.ts`**
 
-Esta é a taxonomia autoral da aplicaçêo INEMA de geraçêo de prompts para Seedance 2.0. Segue a estrutura arquitetural do módulo 3.3 da Trilha 3 (8 camadas), mas com nomes, triggers e strings canônicas próprias — **nêo é cópia** dos presets do produto estudado.
+Esta é a taxonomia autoral da aplicaçêo ARCKHÉ de geraçêo de prompts para Seedance 2.0. Segue a estrutura arquitetural do módulo 3.3 da Trilha 3 (8 camadas), mas com nomes, triggers e strings canônicas próprias — **nêo é cópia** dos presets do produto estudado.
 
 ## Princípios
 
@@ -17,7 +17,7 @@ Esta é a taxonomia autoral da aplicaçêo INEMA de geraçêo de prompts para Se
 
 ## Os 6 presets core
 
-### 1. INEMA EPIC — Grandeza e escala
+### 1. ARCKHÉ EPIC — Grandeza e escala
 
 **Funçêo emocional:** o mundo como protagonista, sentimento de pequenez diante da imensidêo, respeito, solenidade.
 
@@ -35,7 +35,7 @@ techniques:   ["atmospheric haze depth", "natural cloth movement",
 
 ---
 
-### 2. INEMA INTIMIST — Momentos íntimos e contemplativos
+### 2. ARCKHÉ INTIMIST — Momentos íntimos e contemplativos
 
 **Funçêo emocional:** proximidade pessoal, silêncio significativo, vulnerabilidade, gestos pequenos que importam.
 
@@ -54,7 +54,7 @@ techniques:   ["shallow depth of field", "skin texture macro detail",
 
 ---
 
-### 3. INEMA URBAN PULSE — Cidade contemporânea viva
+### 3. ARCKHÉ URBAN PULSE — Cidade contemporânea viva
 
 **Funçêo emocional:** cotidiano vibrante, movimento urbano, modernidade, ritmo da cidade, vida acontecendo.
 
@@ -73,7 +73,7 @@ techniques:   ["reflective surface interaction", "crowd motion blur",
 
 ---
 
-### 4. INEMA ELEMENTAL — Forças da natureza em primeiro plano
+### 4. ARCKHÉ ELEMENTAL — Forças da natureza em primeiro plano
 
 **Funçêo emocional:** poder da natureza, elemento como protagonista absoluto, impotência humana, beleza destrutiva.
 
@@ -91,7 +91,7 @@ techniques:   ["water surface tension physics", "particle system interaction",
 
 ---
 
-### 5. INEMA DREAM — Onírico e fantasia suave
+### 5. ARCKHÉ DREAM — Onírico e fantasia suave
 
 **Funçêo emocional:** mágico sem ser infantil, memória idealizada, poesia visual, atmosfera etérea.
 
@@ -110,7 +110,7 @@ techniques:   ["cloth inertia physics", "particle drift atmosphere",
 
 ---
 
-### 6. INEMA DOCUMENTARY — Observaçêo autêntica
+### 6. ARCKHÉ DOCUMENTARY — Observaçêo autêntica
 
 **Funçêo emocional:** realismo honesto, relato, crédibilidade, personagem real em contexto real.
 
@@ -131,7 +131,7 @@ techniques:   ["natural practical lighting", "unscripted micro-expressions",
 
 ## Fallback inventivo
 
-Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cinematográfico famoso, o modelo deve **inventar um gênero novo** em CAPS seguindo o padrêo `<REFERENCE> <STYLE>`.
+Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cARCKHÉtográfico famoso, o modelo deve **inventar um gênero novo** em CAPS seguindo o padrêo `<REFERENCE> <STYLE>`.
 
 **Exemplos permitidos:**
 - `LYNCH SURREAL` — surrealismo David Lynch (cortinas vermelhas, luz verde, slow ambient dread)
@@ -139,7 +139,7 @@ Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cinematográfico 
 - `MIYAZAKI PASTORAL` — estética Studio Ghibli (céu azul com nuvens grandes, vento no cabelo)
 - `KUBRICK SYMMETRIC` — simetria Kubrick (one-point perspective, geometria rígida)
 - `WONG KAR WAI NEON` — Wong Kar Wai (slow motion, neon, solidêo urbana)
-- `GLAUBER ROCHA ARIDO` — cinema novo brasileiro (alto contraste, ventos do sertêo)
+- `GLAUBER ROCHA ARIDO` — cARCKHÉ novo brasileiro (alto contraste, ventos do sertêo)
 
 **Instruçêo ao modelo:** use o nome do diretor/estilo em CAPS, preencha `color_system`, `camera_style` e `techniques` baseado no conhecimento visual desse estilo.
 
@@ -148,10 +148,10 @@ Quando nenhum dos 6 core se encaixa mas a cena evoca um estilo cinematográfico 
 ## Routing rules (ordem de prioridade)
 
 1. **Match pelo PRIMEIRO** preset cujos triggers se encaixam na descriçêo.
-2. **Se nenhum core encaixa** mas a cena evoca estilo cinematográfico famoso → invente via fallback.
-3. **Default de escala**: cenas épicas/grandes sem trigger específico → `INEMA EPIC`.
-4. **Default de intimidade**: cenas pessoais/calmas sem trigger específico → `INEMA INTIMIST`.
-5. **Override urbano**: qualquer cena de cotidiano urbano, mesmo que caiba em outro preset, prefere `INEMA URBAN PULSE` quando o movimento da cidade é central.
+2. **Se nenhum core encaixa** mas a cena evoca estilo cARCKHÉtográfico famoso → invente via fallback.
+3. **Default de escala**: cenas épicas/grandes sem trigger específico → `ARCKHÉ EPIC`.
+4. **Default de intimidade**: cenas pessoais/calmas sem trigger específico → `ARCKHÉ INTIMIST`.
+5. **Override urbano**: qualquer cena de cotidiano urbano, mesmo que caiba em outro preset, prefere `ARCKHÉ URBAN PULSE` quando o movimento da cidade é central.
 
 ---
 
@@ -174,21 +174,21 @@ LINE 1 (literal opening, always):
 [6s] <climax framing>. <moment of pause 1-2s — brief quiet — frozen micro-detail>
      — return to natural motion as <return event>.
      Phase 3 audio: full emotional resolution with layered sound.
-     Cinematic 2.39:1 aspect ratio.
+     CARCKHÉtic 2.39:1 aspect ratio.
 ```
 
 ### Diferenças vs. template do material de referência
 
-| Elemento | Material referência | INEMA |
+| Elemento | Material referência | ARCKHÉ |
 |---|---|---|
 | Abertura literal | "same character throughout all shots" | **mantém** (é técnica universal) |
 | [0s] audio | "practical sounds only — ambient list" | **mantém** |
 | [3s] audio | "single low brass chord arrives, building tension" | **"ambient music enters softly, building subtle tension"** — menos dramático, mais versátil |
 | [6s] técnica | "STOP MOTION X-seconds — complete audio silence — explosive snap-back" | **"moment of pause 1-2s — brief quiet — frozen micro-detail — return to natural motion"** — mais suave, menos datado |
 | [6s] audio | "full orchestral score crescendo with 3x audio density" | **"full emotional resolution with layered sound"** — sem obrigar orquestra |
-| Fechamento | "Anamorphic 2.39:1" | **"Cinematic 2.39:1 aspect ratio"** — mesma coisa, linguagem menos técnica |
+| Fechamento | "Anamorphic 2.39:1" | **"CARCKHÉtic 2.39:1 aspect ratio"** — mesma coisa, linguagem menos técnica |
 
-**Justificativa das mudanças:** O template original foi validado contra Seedance 1.x e é datado (STOP MOTION virou assinatura overused, brass chord é muito específico). A versêo INEMA mantém o que é técnica universal (`same character`, 3 beats, 3 fases de áudio, 2.39:1) mas substitui os elementos autorais do produto estudado por variações mais flexíveis e atemporais.
+**Justificativa das mudanças:** O template original foi validado contra Seedance 1.x e é datado (STOP MOTION virou assinatura overused, brass chord é muito específico). A versêo ARCKHÉ mantém o que é técnica universal (`same character`, 3 beats, 3 fases de áudio, 2.39:1) mas substitui os elementos autorais do produto estudado por variações mais flexíveis e atemporais.
 
 **Selo "Revalidar v2.0"**: testar empiricamente se esses 3 elementos modificados performam têo bem quanto os originais no Seedance 2.0 atual. Se nêo, voltar para os originais.
 
@@ -198,11 +198,11 @@ LINE 1 (literal opening, always):
 
 Antes de congelar esta taxonomia no `SYSTEM_PROMPT` do `api/generate.ts`, o usuário precisa revisar:
 
-1. **Nomes dos 6 presets** — "INEMA EPIC", "INEMA INTIMIST", "INEMA URBAN PULSE", "INEMA ELEMENTAL", "INEMA DREAM", "INEMA DOCUMENTARY". Mantém todos? Troca algum? Adiciona um 7º?
+1. **Nomes dos 6 presets** — "ARCKHÉ EPIC", "ARCKHÉ INTIMIST", "ARCKHÉ URBAN PULSE", "ARCKHÉ ELEMENTAL", "ARCKHÉ DREAM", "ARCKHÉ DOCUMENTARY". Mantém todos? Troca algum? Adiciona um 7º?
 
 2. **Strings canônicas** — cada preset tem uma string `color_system` de 1 linha. As do draft sêo propostas. Usuário quer reescrever?
 
-3. **Triggers** — as palavras-chave que ativam cada preset estêo corretas para o público da INEMA?
+3. **Triggers** — as palavras-chave que ativam cada preset estêo corretas para o público da ARCKHÉ?
 
 4. **Fallback inventivo** — os 6 exemplos (LYNCH, ALMODOVAR, MIYAZAKI, KUBRICK, WONG KAR WAI, GLAUBER ROCHA) sêo direções razoáveis? Glauber Rocha vale a pena citar (brasileiro) ou é muito nicho?
 

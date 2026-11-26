@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INEMA Prompt Engine · Cinematográfico para Seedance 2.0</title>
-  <meta name="description" content="Transforme sua ideia em prompt cinematográfico estruturado para Seedance 2.0. Taxonomia autoral INEMA + workflow de histórias.">
+  <title>ARCKHÉ Prompt Engine · CARCKHÉtográfico para Seedance 2.0</title>
+  <meta name="description" content="Transforme sua ideia em prompt cARCKHÉtográfico estruturado para Seedance 2.0. Taxonomia autoral ARCKHÉ + workflow de histórias.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -97,11 +97,11 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <span class="text-2xl">🎬</span>
-        <span class="font-bold text-lg tracking-tight">INEMA <span class="text-primary">Prompt Engine</span></span>
+        <span class="font-bold text-lg tracking-tight">ARCKHÉ <span class="text-primary">Prompt Engine</span></span>
       </div>
       <div class="flex items-center space-x-3 text-sm">
         <span id="llm-indicator" class="hidden sm:inline text-xs text-neutral-500 font-mono"></span>
-        <a href="https://inema.club" target="_blank" class="text-neutral-400 hover:text-primary transition-colors hidden sm:inline">inema.club</a>
+        <a href="https://ARCKHÉ AI" target="_blank" class="text-neutral-400 hover:text-primary transition-colors hidden sm:inline">ARCKHÉ AI</a>
         <button onclick="openSettings()" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Configurações">
           <svg class="w-4 h-4 text-neutral-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="3"/>
@@ -116,11 +116,11 @@
   <header class="pt-14 pb-8 px-4 sm:px-6">
     <div class="max-w-3xl mx-auto text-center">
       <div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/30 mb-6">
-        SEEDANCE 2.0 · TAXONOMIA INEMA v1.0
+        SEEDANCE 2.0 · TAXONOMIA ARCKHÉ v1.0
       </div>
       <h1 class="text-4xl sm:text-6xl font-bold mb-5 tracking-tight leading-tight">
         Do briefing ao prompt<br>
-        <span class="serif italic text-primary">cinematográfico</span> em 30 segundos.
+        <span class="serif italic text-primary">cARCKHÉtográfico</span> em 30 segundos.
       </h1>
       <p class="text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-10">
         Escolha: prompt único para uma cena, ou <strong class="text-primary">workflow</strong> — conte uma história e receba um fluxo de cenas conectadas.
@@ -158,7 +158,7 @@
 
           <div class="flex items-center justify-between mt-3 text-xs text-neutral-500">
             <span id="char-count">0 / 4000 caracteres</span>
-            <span>Português ou inglês · 6 presets INEMA</span>
+            <span>Português ou inglês · 6 presets ARCKHÉ</span>
           </div>
 
           <!-- MOOD + VISUAL STYLE SELECTORS (two columns) -->
@@ -169,12 +169,12 @@
               </div>
               <select id="mood-select" class="w-full p-2.5 bg-dark-900/80 text-neutral-100 rounded-lg border border-dark-600 focus:border-primary focus:outline-none text-sm">
                 <option value="auto">🤖 Automático (IA decide)</option>
-                <option value="epic">🏔️ INEMA EPIC — grandeza</option>
-                <option value="intimist">🕯️ INEMA INTIMIST — íntimo</option>
-                <option value="urban pulse">🏙️ INEMA URBAN PULSE — urbano</option>
-                <option value="elemental">⛈️ INEMA ELEMENTAL — natureza</option>
-                <option value="dream">🌸 INEMA DREAM — onírico</option>
-                <option value="documentary">🎞️ INEMA DOCUMENTARY — observacional</option>
+                <option value="epic">🏔️ ARCKHÉ EPIC — grandeza</option>
+                <option value="intimist">🕯️ ARCKHÉ INTIMIST — íntimo</option>
+                <option value="urban pulse">🏙️ ARCKHÉ URBAN PULSE — urbano</option>
+                <option value="elemental">⛈️ ARCKHÉ ELEMENTAL — natureza</option>
+                <option value="dream">🌸 ARCKHÉ DREAM — onírico</option>
+                <option value="documentary">🎞️ ARCKHÉ DOCUMENTARY — observacional</option>
               </select>
             </div>
             <div>
@@ -227,7 +227,7 @@
             onclick="generate()"
             class="w-full mt-6 px-6 py-4 bg-primary text-dark-900 font-bold text-base rounded-lg hover:bg-yellow-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
-            <span id="btn-label">⚡ Gerar prompt cinematográfico</span>
+            <span id="btn-label">⚡ Gerar prompt cARCKHÉtográfico</span>
             <svg id="btn-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" class="opacity-25"></circle>
               <path fill="currentColor" class="opacity-75" d="M4 12a8 8 0 018-8V0C5.37 0 0 5.37 0 12h4z"></path>
@@ -247,7 +247,7 @@
           </div>
           <div class="skeleton h-48 mb-4"></div>
           <div class="text-center text-sm text-neutral-500 mt-6">
-            Gerando prompt cinematográfico · ~15-30s
+            Gerando prompt cARCKHÉtográfico · ~15-30s
           </div>
         </section>
 
@@ -258,7 +258,7 @@
           <div class="glass rounded-2xl p-6 sm:p-8 mb-6">
             <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
               <div>
-                <div class="text-xs uppercase tracking-wider text-neutral-500 mb-1">Categoria INEMA</div>
+                <div class="text-xs uppercase tracking-wider text-neutral-500 mb-1">Categoria ARCKHÉ</div>
                 <div id="result-category" class="text-2xl sm:text-3xl font-bold text-primary category-glow"></div>
               </div>
               <button onclick="regenerate()" class="text-xs px-4 py-2 bg-dark-700 hover:bg-dark-600 rounded-lg text-neutral-400 hover:text-primary transition-colors border border-dark-600 flex items-center space-x-2">
@@ -495,7 +495,7 @@
           <div class="glass rounded-xl p-5">
             <div class="text-3xl mb-3">2️⃣</div>
             <h3 class="font-bold mb-2">A IA estrutura</h3>
-            <p class="text-sm text-neutral-400">Claude Sonnet 4.6 + taxonomia INEMA gera prompt(s) no template [0s][3s][6s].</p>
+            <p class="text-sm text-neutral-400">Claude Sonnet 4.6 + taxonomia ARCKHÉ gera prompt(s) no template [0s][3s][6s].</p>
           </div>
           <div class="glass rounded-xl p-5">
             <div class="text-3xl mb-3">3️⃣</div>
@@ -627,8 +627,8 @@
   <!-- FOOTER -->
   <footer class="border-t border-dark-600/50 py-8 mt-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-neutral-500">
-      <p class="mb-2">INEMA Prompt Engine · <a href="https://inema.club" target="_blank" class="text-primary hover:text-yellow-300">inema.club</a> · 2026</p>
-      <p class="text-xs">Taxonomia autoral INEMA v1.0 · Powered by Claude Sonnet 4.6 · Open source</p>
+      <p class="mb-2">ARCKHÉ Prompt Engine · <a href="https://ARCKHÉ AI" target="_blank" class="text-primary hover:text-yellow-300">ARCKHÉ AI</a> · 2026</p>
+      <p class="text-xs">Taxonomia autoral ARCKHÉ v1.0 · Powered by Claude Sonnet 4.6 · Open source</p>
     </div>
   </footer>
 
@@ -740,7 +740,7 @@
     // ═══════════════════════════════════════════════════════
     // SETTINGS (localStorage)
     // ═══════════════════════════════════════════════════════
-    const SETTINGS_KEY = 'inema_settings_v2';
+    const SETTINGS_KEY = 'ARCKHÉ_settings_v2';
 
     function getSettings() {
       try {
@@ -828,7 +828,7 @@
       if (!confirm('Limpar todas as configurações (LLM + rendering keys)?')) return;
       localStorage.removeItem(SETTINGS_KEY);
       // Also remove the old v1 key for backwards compat
-      localStorage.removeItem('inema_settings_v1');
+      localStorage.removeItem('ARCKHÉ_settings_v1');
       document.getElementById('llm-auth').value = 'oauth';
       document.getElementById('llm-key').value = '';
       document.getElementById('llm-model').value = 'claude-sonnet-4-5';
@@ -1023,7 +1023,7 @@
 
     function setLoading(loading) {
       btn.disabled = loading;
-      btnLabel.textContent = loading ? 'Gerando...' : '⚡ Gerar prompt cinematográfico';
+      btnLabel.textContent = loading ? 'Gerando...' : '⚡ Gerar prompt cARCKHÉtográfico';
       btnSpinner.classList.toggle('hidden', !loading);
       loadingState.classList.toggle('hidden', !loading);
       if (loading) {

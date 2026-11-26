@@ -266,7 +266,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log("\n\x1b[32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m");
-  console.log(`  🎬 \x1b[1mINEMA Prompt Engine\x1b[0m — dev server`);
+  console.log(`  🎬 \x1b[1mARCKHÉ Prompt Engine\x1b[0m — dev server`);
   console.log("");
   console.log(`  \x1b[36mLocal:\x1b[0m   http://localhost:${PORT}`);
   console.log(`  \x1b[36mEndpoints:\x1b[0m`);

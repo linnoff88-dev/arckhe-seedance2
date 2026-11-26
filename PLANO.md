@@ -64,7 +64,7 @@ Fontes: `seedance-pesquisa-web-2026.md` (estado do modelo, URLs oficiais), trech
 - A1.3 Aula-exemplo: uma frase ruim → uma frase boa → vídeo final. Lado a lado.
 - A1.4 Seu primeiro prompt guiado (preencha-as-lacunas em português, o curso traduz para EN automaticamente).
 
-**Módulo A2 — Dicionário de cinema sem trauma**
+**Módulo A2 — Dicionário de cARCKHÉ sem trauma**
 - A2.1 Planos (geral, médio, close) explicados com memes e filmes conhecidos.
 - A2.2 Movimentos de câmera (dolly, pan, crash zoom) com GIFs de Hollywood.
 - A2.3 Luz e cor: por que "hora dourada" vira amarelo-mel e "blade runner" vira azul-vermelho.
@@ -87,7 +87,7 @@ Fontes: `seedance-pesquisa-web-2026.md` (estado do modelo, URLs oficiais), trech
 
 ---
 
-### TRILHA B — "Receitário Cinematográfico Seedance" (Prompt-Ready / Aplicado)
+### TRILHA B — "Receitário CARCKHÉtográfico Seedance" (Prompt-Ready / Aplicado)
 
 **Público**: já sabe o que é um plano, já gerou 1-2 vídeos, quer produtividade e resultados consistentes em projetos reais (UGC, anúncios, conteúdo de cliente).
 **Promessa**: ao final, terá **um banco pessoal de 30+ prompts prontos** categorizados, dominará os 7 presets, saberá fazer variações em 30 segundos, e entenderá os hacks nêo documentados.
@@ -108,7 +108,7 @@ Uma aula profunda por preset, cada uma contendo:
   - Variações permitidas vs. proibidas
   - Gatilhos de ativaçêo (quando escolher este preset)
 
-Presets: **DUNE EPIC, JOHN WICK ACTION, BLADE RUNNER NOIR, SILENT HILL HORROR, STORM EPIC, FAIRY TALE CINEMATIC, ANIME SHONEN EPIC**.
+Presets: **DUNE EPIC, JOHN WICK ACTION, BLADE RUNNER NOIR, SILENT HILL HORROR, STORM EPIC, FAIRY TALE CARCKHÉTIC, ANIME SHONEN EPIC**.
 
 **Módulo B3 — Vocabulário canônico aplicado**
 - B3.1 Câmera (10 termos) — quando usar cada um.
@@ -158,7 +158,7 @@ Presets: **DUNE EPIC, JOHN WICK ACTION, BLADE RUNNER NOIR, SILENT HILL HORROR, S
 
 **Módulo C3 — O system prompt reconstruído (anatomia em 8 camadas)**
 Uma aula por camada do `seedance-system-prompt-didactic.md`:
-  - C3.1 **ROLE** — por que "Seedance Cinematic Prompt Engineer" ancora tudo.
+  - C3.1 **ROLE** — por que "Seedance CARCKHÉtic Prompt Engineer" ancora tudo.
   - C3.2 **OUTPUT SCHEMA** via tool use (os 7 campos obrigatórios; por que forçado bloqueia injection).
   - C3.3 **PRESETS** como biblioteca de receitas (strings canônicas literais).
   - C3.4 **ROUTING RULES** — classificaçêo + cláusula "inventar gênero".
@@ -215,7 +215,7 @@ Uma aula por camada do `seedance-system-prompt-didactic.md`:
 | Código do clone (`generate.ts`, `check-email.ts`, HTML) | `seedance-clone/` | Virar laboratório C4 |
 | Estado do Seedance 2.0 + links oficiais | `seedance-pesquisa-web-2026.md` | Virar Capítulo 0.1 + C1 |
 | Análise de saturaçêo | `seedance-saturacao-e-proximas-sondas.md` | Virar aula C2.7 |
-| **Fundamentos de cinema para leigos** (planos, ângulos, luz, cor) | **Nêo está nos docs** | **Criar do zero** para Módulo A2 |
+| **Fundamentos de cARCKHÉ para leigos** (planos, ângulos, luz, cor) | **Nêo está nos docs** | **Criar do zero** para Módulo A2 |
 | **Workflow com DaVinci/Premiere** | **Nêo está nos docs** | **Criar** para C6.1 |
 | **Pricing e vendas de vídeo-IA** | **Nêo está nos docs** | **Criar** para C6.4 |
 | **Compliance / direitos** | **Nêo está nos docs** | **Criar** para Capítulo 0.4 + C6.5 |
@@ -227,7 +227,7 @@ Uma aula por camada do `seedance-system-prompt-didactic.md`:
 
 ## Formato e entrega (decisões travadas)
 
-- **Formato**: HTML no padrêo INEMA.CLUB. Skills `formato-curso` e `revisar-curso` aplicam direto. Uma página de índice por trilha + páginas de aula + componentes visuais INEMA.
+- **Formato**: HTML no padrêo ARCKHÉ AI. Skills `formato-curso` e `revisar-curso` aplicam direto. Uma página de índice por trilha + páginas de aula + componentes visuais ARCKHÉ.
 - **Navegaçêo**: cada aula = 1 página HTML, header de trilha colorido (A verde "iniciante", B âmbar "aplicado", C azul "técnico"), barra de progresso, links "anterior/próxima".
 - **Mídia (sem fal.ai por ora)**: o usuário ainda nêo tem crédito fal.ai. Estratégia de compensaçêo:
   - Embeds de **terceiros creditados**: GitHub `awesome-seedance-2-prompts` (500+ prompts com vídeos), YouTube de criadores Seedance, página oficial ByteDance.
@@ -246,13 +246,13 @@ Uma aula por camada do `seedance-system-prompt-didactic.md`:
 
 Sem validaçêo empírica prévia (decisêo do usuário). Sem fal.ai no início. Entrega monolítica das 3 trilhas.
 
-1. **Fase 1 — Esqueleto HTML INEMA.CLUB (meio dia)**: skill `formato-curso` gera a shell: 1 página-hub + 1 índice por trilha (A/B/C) + template de aula. Define paleta por trilha, barra de progresso, componente "Vídeo-exemplo".
+1. **Fase 1 — Esqueleto HTML ARCKHÉ AI (meio dia)**: skill `formato-curso` gera a shell: 1 página-hub + 1 índice por trilha (A/B/C) + template de aula. Define paleta por trilha, barra de progresso, componente "Vídeo-exemplo".
 2. **Fase 2 — Capítulo 0 comum (1 dia)**: 4 aulas de portal — estado do Seedance 2.0, setup fal.ai/Dreamina, diagnóstico de trilha, ética + **banner "Revalidar na v2.0"**.
-3. **Fase 3 — Trilha A (4-5 dias)**: 4 módulos × ~4-5 aulas = ~20 aulas. Cria do zero o **Dicionário de cinema sem trauma** (A2). Hands-on leve com playground.
+3. **Fase 3 — Trilha A (4-5 dias)**: 4 módulos × ~4-5 aulas = ~20 aulas. Cria do zero o **Dicionário de cARCKHÉ sem trauma** (A2). Hands-on leve com playground.
 4. **Fase 4 — Trilha B (6-8 dias)**: 5 módulos. O núcleo é **B2 (7 presets canônicos)** — 7 aulas profundas, cada uma com 4 exemplos de prompt completo + vídeo placeholder. B4 cobre hacks/inventar-gênero. B5 cobre escala e image-to-video.
 5. **Fase 5 — Trilha C (6-8 dias)**: 6 módulos. **C3** é o system prompt didático já pronto (8 aulas, uma por camada, copiando o `.md` existente). **C4** é laboratório do clone (4 aulas usando `generate.ts` linha-a-linha). **C5-C6** exigem criaçêo nova (taxonomia autoral, pipeline comercial, compliance).
 6. **Fase 6 — Revisêo integrada (1-2 dias)**: usar skill `revisar-curso` para auditar os ~70 arquivos HTML. Conferir links entre trilhas, pontes, consistência visual, selos "Revalidar v2.0".
-7. **Fase 7 — Publicaçêo**: push para INEMA.CLUB.
+7. **Fase 7 — Publicaçêo**: push para ARCKHÉ AI.
 8. **Fase 8 — Pós-lançamento** (quando o usuário conseguir crédito fal.ai): batch-render dos vídeos-exemplo placeholders, substituiçêo em sessêo única.
 
 **Estimativa total**: 3-5 semanas. Paralelismo possível entre módulos dentro de cada trilha.
@@ -270,7 +270,7 @@ Sem validaçêo empírica prévia (decisêo do usuário). Sem fal.ai no início.
 
 ## Decisões travadas
 
-- ✅ **Formato**: HTML INEMA.CLUB.
+- ✅ **Formato**: HTML ARCKHÉ AI.
 - ✅ **Fal.ai**: sem crédito no início. Vídeos como placeholder + embeds de terceiros creditados; substituiçêo pós-lançamento.
 - ✅ **Entrega**: tudo de uma vez (3 trilhas completas antes de publicar).
 - ✅ **Validaçêo v2.0**: nêo travar na pré-redaçêo; marcar pontos afetados com selo "Revalidar v2.0" e banner no Capítulo 0.
@@ -279,7 +279,7 @@ Sem validaçêo empírica prévia (decisêo do usuário). Sem fal.ai no início.
 
 Estas podem ser tomadas durante a execuçêo:
 
-1. **Monetizaçêo**: grátis aberto na INEMA.CLUB, pago, ou freemium (A grátis / B+C pagas)? Padrêo assumido: **grátis aberto** a menos que avisado.
+1. **Monetizaçêo**: grátis aberto na ARCKHÉ AI, pago, ou freemium (A grátis / B+C pagas)? Padrêo assumido: **grátis aberto** a menos que avisado.
 2. **Co-autoria**: Claude redige drafts completos e o usuário revisa? Ou co-escrita iterativa aula a aula? Padrêo assumido: **Claude draft → usuário revisa por módulo**.
 3. **Créditos dos embeds**: qual é a política de creditar terceiros (awesome-seedance, MindStudio, redreamality) nas páginas? Padrêo assumido: **link + nome do autor em cada embed + página "Fontes" no Capítulo 0**.
 

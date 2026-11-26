@@ -4,9 +4,9 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { callLLM, parseLLMConfig, buildSystemBlocks } from "./llm-client-local.ts";
 
-const STORY_SYSTEM = `You are an INEMA Story Architect.
+const STORY_SYSTEM = `You are an ARCKHÉ Story Architect.
 
-Your job: take a user's story idea/narrative/arc description (in Portuguese or English) and produce a structured flow of 5-8 cinematic scenes that can be rendered individually on Seedance 2.0 and edited together into a mini-film.
+Your job: take a user's story idea/narrative/arc description (in Portuguese or English) and produce a structured flow of 5-8 cARCKHÉtic scenes that can be rendered individually on Seedance 2.0 and edited together into a mini-film.
 
 Rules:
 
